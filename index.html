@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#080B15">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Happy Birthday, My Love · A Romantic Celebration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas for Starlight & Bokeh -->
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-glow"></div>
+
+  <!-- Main Application Container -->
+  <div class="app-container">
+
+    <!-- Top Navigation & Music Controls -->
+    <header class="top-header">
+      <div class="brand-kicker">For My Favorite Person ♡</div>
+      <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music">
+        <div id="soundBars" class="sound-bars">
+          <div class="sound-bar"></div>
+          <div class="sound-bar"></div>
+          <div class="sound-bar"></div>
+          <div class="sound-bar"></div>
+        </div>
+        <span id="musicBtnText">Music Off</span>
+      </button>
+    </header>
+
+    <!-- ====================================================================
+         VIEW 1: WELCOME SCREEN
+         ==================================================================== -->
+    <section id="welcomeScreen" class="view-section active" aria-label="Birthday Welcome Greeting">
+      <div class="welcome-card">
+        <div class="welcome-badge">✦ A Special Birthday Celebration ✦</div>
+        <h1 class="welcome-title">
+          Happy Birthday,
+          <span class="script">My Beautiful Love</span>
+        </h1>
+        <p class="welcome-text">
+          Today is all about celebrating the most incredible, breathtaking, and kind-hearted person I know.
+          Every memory with you is a moment I cherish deeply.
+        </p>
+        <button id="btnMoreWishes" class="btn-primary-glow">
+          <span>More Wishes ✨</span>
+        </button>
+        <div class="welcome-note">Tap to begin our romantic journey with music ♪</div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 2: CINEMATIC HORIZONTAL GALLERY
+         ==================================================================== -->
+    <section id="cinemaScreen" class="view-section" aria-label="Romantic Cinema Stage">
+      
+      <!-- Progress Bar (10 Story Segments) -->
+      <div id="progressContainer" class="cinema-progress-container" aria-label="Story Progress">
+        <!-- Segments dynamically rendered by script.js -->
+      </div>
+
+      <!-- Cinema Viewport (Wide Horizontal Frame) -->
+      <div id="cinemaViewport" class="cinema-viewport">
+        <!-- Ambient Blurred Background (Matches Current Photo) -->
+        <div id="ambientBg" class="cinema-ambient-bg"></div>
+
+        <!-- Cinema Letterbox Vignette -->
+        <div class="cinema-vignette"></div>
+
+        <!-- Cinema Stage: Hero Photo (100% Uncropped, Faces Preserved) -->
+        <div class="cinema-stage-wrapper">
+          <div id="photoWrapper" class="hero-photo-wrapper">
+            <img id="heroPhoto" class="hero-photo" src="" alt="Romantic Memory">
+          </div>
+        </div>
+
+        <!-- Subtle Film Flare -->
+        <div class="cinema-lens-flare"></div>
+      </div>
+
+      <!-- Memory Badge and Romantic Caption -->
+      <div class="cinema-details">
+        <div id="memoryBadge" class="memory-indicator">
+          <span class="sparkle">✦</span> MOMENT 01 OF 10 <span class="sparkle">✦</span>
+        </div>
+        <blockquote id="cinemaCaption" class="cinema-caption">
+          “From the moment you stepped into my life, everything turned into poetry.”
+        </blockquote>
+      </div>
+
+      <!-- Cinema Bottom Controls -->
+      <div class="cinema-controls-bar">
+        <button id="btnPrev" class="btn-nav" aria-label="Previous Memory" disabled>
+          <span>❮</span> Previous
+        </button>
+
+        <button id="btnAutoplay" class="btn-autoplay-toggle active" aria-label="Toggle Auto Advance">
+          <span>⏸</span> Pause Auto
+        </button>
+
+        <button id="btnNext" class="btn-nav" aria-label="Next Memory">
+          Next <span>❯</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: FINALE CELEBRATION SCREEN
+         ==================================================================== -->
+    <section id="finaleScreen" class="view-section" aria-label="Birthday Grand Finale">
+      <div class="finale-card">
+        
+        <!-- Pulsing Romantic Heart -->
+        <div id="finaleHeart" class="heart-pulsing-wrapper" title="Tap for more hearts!">
+          <svg class="heart-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F7D58C" />
+                <stop offset="45%" stop-color="#F8B4CB" />
+                <stop offset="100%" stop-color="#D47A9A" />
+              </linearGradient>
+            </defs>
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <div class="finale-kicker">Happy Birthday, Sweetheart</div>
+        <h2 class="finale-title">To Many More Years of Us</h2>
+
+        <div class="finale-letter">
+          <p>
+            May your new year be blessed with boundless laughter, peaceful mornings, and every dream your beautiful heart aspires to reach.
+          </p>
+          <p>
+            Thank you for being my anchor, my sweetest joy, and my greatest blessing. No matter how many birthdays come and go, my love for you only grows deeper with every beat.
+          </p>
+          <p>
+            I love you more than words could ever say. ♡
+          </p>
+        </div>
+
+        <div class="finale-buttons">
+          <button id="btnReplay" class="btn-primary-glow">
+            <span>Replay Our Story ↺</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Background Music Audio Element -->
+  <audio id="bgAudio" preload="auto" src="assets/audio/song_0.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
